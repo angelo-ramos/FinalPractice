@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0; box-sizing: border-box;}
+body{
+    background: url("fondo.jpg")no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);;
+}
+
+form{
+    background: white;
+    max-width: 600px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+form h3{
+    text-align: center;
+    color: #005200;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+form input[type=text],
+form input[type=number],
+form input[type=password],
+form input[type=email]{
+    width: 34%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+form input[type=submit]{
+    width: 49%;
+    height: 35px;
+    cursor: pointer;
+    background: #005200;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.15s;
+}
+
+form input[type=submit]:hover{
+    background-color: #28a745;
+}
+form input[type=text]:focus{
+    outline: 0;
+}
+form input[type=number]:focus{
+    outline: 0;
+}
+form input[type=password]:focus{
+    outline: 0;
+}
+form input[type=email]:focus{
+    outline: 0;
+}
