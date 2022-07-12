@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="error" scope="request" type="java.lang.String"/>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -34,14 +33,14 @@
             </div>
             <input type="email" name="usuario" placeholder="Usuario (Correo PUCP)" required="">
             <input type="password" name="contrasena" placeholder="Contraseña" required="">
-            <% if(error.equals("credencialesIncorr")) {%>
-            <div class="text-danger mb-2">Error en usuario o contraseña</div>
-            <%}else if(error.equals("noEsTeleco")){%>
-            <div class="text-danger mb-2">Usted no pertenece a la gloriosa especialidad de Telecom</div>
-            <%}else{%>
-            <br/>
-            <br/>
+
+            <%if(session.getAttribute("msg") != null){%>
+            <div>
+                <div class="text-danger mb-2"><%=session.getAttribute("msg")%></div>
+            </div>
+            <%session.removeAttribute("msg");%>
             <%}%>
+
             <div class="text-center">
                 <input type="submit" class="btn btn-outline-primary" value="Ingresar"/>
             </div>
